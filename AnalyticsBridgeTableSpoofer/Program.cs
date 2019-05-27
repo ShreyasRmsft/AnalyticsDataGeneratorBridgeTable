@@ -10,7 +10,7 @@ namespace AnalyticsBridgeTableSpoofer
     class Program
     {
         static int NumberOfFilesLimit = -1;
-        const int NumberOfBranches = 1;
+        const int NumberOfBranches = 30;
 
         const int StartingBuildPipelineSK = 123;
         const int StartingProjectSK = 1234;
@@ -123,7 +123,7 @@ namespace AnalyticsBridgeTableSpoofer
 
                         var fileParts = file.Split('/');
 
-                        for (int currentParentNumber = parentCount; parentCount > 0; parentCount--)
+                        for (int currentParentNumber = parentCount; currentParentNumber > 0; currentParentNumber--)
                         {
                             var currentParent = String.Join("/", fileParts.Take(currentParentNumber).ToArray());
 
